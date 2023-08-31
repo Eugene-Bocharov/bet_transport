@@ -5,7 +5,7 @@ import { HeaderButtonStyled } from './HeaderButton.styles';
 export const HeaderButton: React.FC = () => {
   return (
     <>
-      <HeaderButtonStyled>Contact</HeaderButtonStyled>
+      <HeaderButtonStyled to={'/storage'}>Contact</HeaderButtonStyled>
     </>
   );
 };

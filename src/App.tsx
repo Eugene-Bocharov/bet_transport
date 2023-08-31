@@ -1,8 +1,17 @@
 import React from 'react';
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { BrowserRouter } from 'react-router-dom';
 import { HomePage } from './pages/HomePage/HomePage';
+import { StoragePage } from './pages/StoragePage/StoragePage';
+import { ContactPage } from './pages/ContactPage/ContactPage';
+import { MovingPage } from './pages/MovingPage/MovingPage';
+import { LTLPage } from './pages/LTLPage/LTLPage';
+
+import { useTranslation } from 'react-i18next';
+import './i18n'; // Import the i18n configuration
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import { Header } from './components/Organisms/Header/Header';
 
 declare module '@mui/material/styles' {
   interface TypeText {
@@ -37,14 +46,24 @@ const theme = createTheme({
 });
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <>
-      {' '}
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <HomePage />
-        </ThemeProvider>
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/storage" element={<StoragePage />} />
+            <Route path="/moving" element={<MovingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/LTL" element={<LTLPage />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
     </>
   );
 }

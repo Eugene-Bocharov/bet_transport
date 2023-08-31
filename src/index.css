@@ -5,11 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 6000px;
+  /* height: 6000px; */
   overflow-y: auto;
   overflow-x: hidden;
   /* background-color: #353434; */
 }
+
 
 *::selection {
   background-color: #008080; /* Set your desired background color */

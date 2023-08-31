@@ -1,14 +1,14 @@
 import { styled } from '@mui/material/styles';
 import { Button, ButtonProps } from '@mui/material';
-
+import { Link, LinkProps } from 'react-router-dom';
 const tiltAmount = '1.2rem';
 
-export const HeaderButtonStyled = styled(Button)<ButtonProps>(({ theme }) => ({
+export const HeaderButtonStyled = styled(Link)<LinkProps>(({ theme }) => ({
   fontFamily: theme.typography.fontFamily,
   textTransform: 'none',
-  maxWidth: '150px',
+  // maxWidth: '30px',
   fontSize: '20px',
-  height: '45px',
+  height: '25px',
   fontWeight: '500',
   textDecoration: 'none',
   transition: 'color 0.18s linear',

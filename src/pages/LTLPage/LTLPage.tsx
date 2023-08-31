@@ -6,23 +6,19 @@ import { HomeTitle } from '../../components/Atoms/HomeTitle/HomeTitle';
 import { AboutUs } from '../../components/Organisms/AboutUs/AboutUs';
 import { ModernPic } from '../../components/Molecules/ModernPic/ModernPic';
 import { ShortDesc } from '../../components/Molecules/ShortDesc/ShortDesc';
-import { WhyUs } from '../../components//Organisms/WhyUs/WhyUs';
-import { Footer } from '../../components/Organisms/Footer/Footer';
+import { WhyUs } from '../../components/Organisms/WhyUs/WhyUs';
+import { margin } from '@mui/system';
 
-export function HomePage() {
+import { LTLAbout } from '../../components/Organisms/LTLAbout/LTLAbout';
+
+export function LTLPage() {
   return (
     <>
-      <Header>
-        <h1>не має тут бути</h1>
+      <Header isFullWhite>
+        <p>не має тут бути</p>
       </Header>
-      <HomeVid>
-        <HomeTitle />
-      </HomeVid>
-      {/* <ShortDesc /> */}
-      <AboutUs />
-      <ModernPic />
-      <WhyUs />
-      <Footer />
+      {/* Fix the style attribute */}
+      <LTLAbout />
     </>
   );
 }

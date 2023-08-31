@@ -1,6 +1,6 @@
 import { styled, keyframes } from '@mui/system';
 import { Box, BoxProps } from '@mui/material';
-import { makeStyles } from '@mui/system';
+import { makeStyles } from '@mui/styles';
 
 const slideInAnimation = keyframes`
   0% {
@@ -27,10 +27,10 @@ export const useStyles = makeStyles(() => ({
     backgroundImage: `url("https://images.unsplash.com/photo-1616432043562-3671ea2e5242?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80")`,
   },
   secPic: {
-    backgroundImage: `url("https://images.unsplash.com/photo-1616432043562-3671ea2e5242?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80")`,
+    backgroundImage: `url("https://images.unsplash.com/photo-1562954203-74c7fb884cba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80")`,
   },
   thirdPic: {
-    backgroundImage: `url("https://images.unsplash.com/photo-1616432043562-3671ea2e5242?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80")`,
+    backgroundImage: `url("https://images.unsplash.com/photo-1602607771743-9f829d8419e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1886&q=80")`,
   },
 }));
 
@@ -38,8 +38,8 @@ export const PicBox = styled(Box)<BoxProps>(({ theme }) => ({
   color: '#fff',
   position: 'relative',
   textAlign: 'left',
-  width: '400px',
-  height: '570px',
+  width: '350px',
+  height: '520px',
   backgroundSize: 'cover',
 }));
 

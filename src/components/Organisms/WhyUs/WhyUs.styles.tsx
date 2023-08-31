@@ -3,7 +3,7 @@ import { Box, BoxProps } from '@mui/material';
 
 export const WhyUsBox = styled(Box)<BoxProps>(({ theme }) => ({
   // backgroundColor: theme.palette.background.default,
-  backgroundColor: '#782349',
+  // backgroundColor: '#782349',
   width: '72%',
   marginLeft: 'auto',
   marginRight: 'auto',

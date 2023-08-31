@@ -15,7 +15,8 @@ import { HeaderButton } from '../../Atoms/HeaderButton/HeaderButton';
 
 interface Props {
   window?: () => Window;
-  children: any;
+  children: React.ReactElement<any, any>;
+  isFullWhite?: boolean;
 }
 
 function HideOnScroll(props: Props) {
@@ -32,6 +33,7 @@ function HideOnScroll(props: Props) {
 }
 
 export const Header = (props: Props) => {
+  const { isFullWhite } = props; // Destructure isFullWhite from props
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,30 +42,29 @@ export const Header = (props: Props) => {
         document.body.scrollTop > 320 ||
         document.documentElement.scrollTop > 320
       ) {
-        console.log(document.documentElement.scrollTop);
-
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
 
-    window.onscroll = scrollFunction;
+    window.addEventListener('scroll', scrollFunction);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      window.onscroll = null;
+      window.removeEventListener('scroll', scrollFunction);
     };
   }, []);
 
   return (
     <>
-      {isScrolled === false ? (
+      {/* Use the correct condition to check isFullWhite */}
+      {isScrolled === false && !isFullWhite ? (
         <HideOnScroll {...props}>
           <HeaderBoxClear>
             <HeaderTitle />
             <HeaderLinks />
-            <HeaderButton />
+            {/* <HeaderButton /> */}
           </HeaderBoxClear>
         </HideOnScroll>
       ) : (
@@ -71,7 +72,7 @@ export const Header = (props: Props) => {
           <HeaderBox>
             <HeaderTitle />
             <HeaderLinks />
-            <HeaderButton />
+            {/* <HeaderButton /> */}
           </HeaderBox>
         </HideOnScroll>
       )}
