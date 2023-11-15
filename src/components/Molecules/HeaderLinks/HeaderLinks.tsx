@@ -26,13 +26,9 @@ export const HeaderLinks: React.FC = () => {
         <HeaderLink title={t('LTL')} link="/LTL" />
         <HeaderLink title={t('contact')} link="/contact" />
         {i18n.language === 'en' ? (
-          <ButtonStyled onClick={() => changeLanguage('fr')}>
-            Français
-          </ButtonStyled>
+          <ButtonStyled onClick={() => changeLanguage('fr')}>Fr</ButtonStyled>
         ) : (
-          <ButtonStyled onClick={() => changeLanguage('en')}>
-            English
-          </ButtonStyled>
+          <ButtonStyled onClick={() => changeLanguage('en')}>Eng</ButtonStyled>
         )}
       </HeaderLinksBox>
     </>

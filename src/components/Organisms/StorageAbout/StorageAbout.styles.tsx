@@ -31,4 +31,15 @@ export const Container = styled(Box)<BoxProps>(({ theme }) => ({
 export const Divider = styled(Box)<BoxProps>(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
+  width: '50%',
+}));
+
+export const ImgBox = styled(Box)<BoxProps>(({ theme }) => ({
+  height: '450px',
+  width: '450px',
+  marginLeft: '70px',
+  backgroundPosition: 'left center',
+  backgroundImage: `url("https://i.ibb.co/Sn0H3cP/Lm53t2.jpg")`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
 }));

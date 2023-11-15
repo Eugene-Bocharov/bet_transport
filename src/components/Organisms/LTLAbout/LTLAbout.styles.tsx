@@ -25,10 +25,48 @@ export const Container = styled(Box)<BoxProps>(({ theme }) => ({
   width: '70%',
   marginLeft: 'auto',
   marginRight: 'auto',
-  marginTop: '200px',
+  marginTop: '150px',
+  marginBottom: '50px',
 }));
 
 export const Divider = styled(Box)<BoxProps>(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
+  width: '50%',
+}));
+
+export const ImgBox = styled(Box)<BoxProps>(({ theme }) => ({
+  height: '450px',
+  width: '450px',
+  marginLeft: '70px',
+  backgroundPosition: 'center',
+  backgroundImage: `url("https://i.ibb.co/nbLgtmf/IEw7zM.jpg")`,
+  backgroundSize: 'cover',
+}));
+
+export const ImgBox2 = styled(Box)<BoxProps>(({ theme }) => ({
+  height: '450px',
+  width: '450px',
+  marginLeft: '70px',
+  backgroundPosition: 'center',
+  backgroundImage: `url("https://i.ibb.co/VH1wFzm/QP4YoT.jpg:")`,
+  backgroundSize: 'cover',
+}));
+
+export const ImgBox3 = styled(Box)<BoxProps>(({ theme }) => ({
+  height: '450px',
+  width: '450px',
+  marginLeft: '70px',
+  backgroundPosition: 'center',
+  backgroundImage: `url("https://i.ibb.co/j6JjjQQ/CMyGdt.jpg")`,
+  backgroundSize: 'cover',
+}));
+
+export const ImgBox4 = styled(Box)<BoxProps>(({ theme }) => ({
+  height: '450px',
+  width: '450px',
+  marginLeft: '70px',
+  backgroundPosition: 'center',
+  backgroundImage: `url("https://i.ibb.co/7bQrzbj/8Vsmom.jpg")`,
+  backgroundSize: 'cover',
 }));

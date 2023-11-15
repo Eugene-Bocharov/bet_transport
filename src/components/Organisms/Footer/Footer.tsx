@@ -40,8 +40,8 @@ export const Footer: React.FC = () => {
             </ListBox>
             <ListBox>
               <LinkBoxTitle>{t('contactinfo')}</LinkBoxTitle>
-              <ListLink to="/#">+ 14 234 532 35 52 </ListLink>
-              <ListLink to="/#">transport@BET.com</ListLink>
+              <ListLink to="/#">+ 1 514 347 1715 </ListLink>
+              <ListLink to="/#">bocharov.valerii@gmail.com</ListLink>
             </ListBox>
             <ListBox>
               <LinkBoxTitle>{t('socmedia')}</LinkBoxTitle>
