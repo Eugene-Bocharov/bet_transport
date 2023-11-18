@@ -6,8 +6,10 @@ import {
   ImgBox2,
   ImgBox3,
   ImgBox4,
+  ContainerReverse,
   Text,
   Divider,
+  ButtonLink,
   Container,
 } from './LTLAbout.styles';
 import { AboutVert } from '../../Atoms/AboutVert/AboutVert';
@@ -18,13 +20,13 @@ export const LTLAbout = () => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <Container>
+      <ContainerReverse>
         <Divider>
           <Title>{t('LTLTitle')}</Title>
           <Text>{t('LTLAbout')}</Text>
         </Divider>
         <ImgBox />
-      </Container>
+      </ContainerReverse>
       <Container>
         <Divider>
           <Title>{t('FTLTitle')}</Title>
@@ -32,13 +34,13 @@ export const LTLAbout = () => {
         </Divider>
         <ImgBox2 />
       </Container>
-      <Container>
+      <ContainerReverse>
         <Divider>
           <Title>{t('SDTTitle')}</Title>
           <Text>{t('SDTAbout')}</Text>
         </Divider>
         <ImgBox3 />
-      </Container>
+      </ContainerReverse>
       <Container>
         <Divider>
           <Title>{t('TCTTitle')}</Title>
@@ -46,6 +48,13 @@ export const LTLAbout = () => {
         </Divider>
         <ImgBox4 />
       </Container>
+      <ContainerReverse>
+        <Divider>
+          <Text>{t('movingT4')}</Text>
+          <ButtonLink href="https://example.com">Get a Quote</ButtonLink>
+        </Divider>
+        <ImgBox2 />
+      </ContainerReverse>
     </>
   );
 };
