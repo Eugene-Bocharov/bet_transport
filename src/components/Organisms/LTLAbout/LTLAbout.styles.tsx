@@ -48,37 +48,15 @@ export const Divider = styled(Box)<BoxProps>(({ theme }) => ({
   width: '50%',
 }));
 
-export const ImgBox = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/nbLgtmf/IEw7zM.jpg")`,
-  backgroundSize: 'cover',
-}));
-
-export const ImgBox2 = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/VH1wFzm/QP4YoT.jpg:")`,
-  backgroundSize: 'cover',
-}));
-
-export const ImgBox3 = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/j6JjjQQ/CMyGdt.jpg")`,
-  backgroundSize: 'cover',
-}));
-
-export const ImgBox4 = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/7bQrzbj/8Vsmom.jpg")`,
-  backgroundSize: 'cover',
-}));
+export const ImgBox = styled(Box)<BoxProps & { src?: string }>(
+  ({ theme, src }) => ({
+    height: '450px',
+    width: '450px',
+    backgroundPosition: 'center center',
+    backgroundImage: `url("${src}")`,
+    backgroundSize: 'cover',
+  })
+);
 
 export const ButtonLink = styled(Link)<LinkProps>(({ theme }) => ({
   '&& ': {

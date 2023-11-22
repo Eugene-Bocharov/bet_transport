@@ -22,10 +22,12 @@ import { Box, BoxProps } from '@mui/material';
 
 export const TopContainer = styled(Box)<BoxProps>(({ theme }) => ({
   display: 'flex',
-  width: '75%',
+  justifyContent: 'space-between',
+  width: '85%',
   marginLeft: 'auto',
   marginRight: 'auto',
   marginTop: '200px',
+  // backgroundColor: 'pink',
 }));
 
 export const Container = styled(Box)<BoxProps>(({ theme }) => ({
@@ -44,9 +46,7 @@ export const ContainerCol = styled(Box)<BoxProps>(({ theme }) => ({
   display: 'flex',
   // backgroundColor: 'violet',
   flexDirection: 'column-reverse',
-  width: '33%',
-  marginLeft: 'auto',
-  marginRight: 'auto',
+  width: '450px',
   // marginTop: '200px',
 }));
 
@@ -68,6 +68,12 @@ export const Divider = styled(Box)<BoxProps>(({ theme }) => ({
   // width: '50%',
 }));
 
+export const DividerGC = styled(Box)<BoxProps>(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  width: '50%',
+}));
+
 export const DividerHalf = styled(Box)<BoxProps>(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -75,24 +81,15 @@ export const DividerHalf = styled(Box)<BoxProps>(({ theme }) => ({
   // transform: 'rotateX(180deg)',
 }));
 
-export const ImgBox = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '414px',
-  width: '414px',
-  // marginLeft: '70px',
-  backgroundPosition: 'left center',
-  backgroundImage: `url("https://i.ibb.co/Sn0H3cP/Lm53t2.jpg")`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-}));
-
-export const ImgBox2 = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  // marginLeft: '70px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/nbLgtmf/IEw7zM.jpg")`,
-  backgroundSize: 'cover',
-}));
+export const ImgBox = styled(Box)<BoxProps & { src?: string; pos?: number }>(
+  ({ theme, src, pos }) => ({
+    height: '450px',
+    width: '450px',
+    backgroundPosition: `${pos}%`,
+    backgroundImage: `url("${src}")`,
+    backgroundSize: 'cover',
+  })
+);
 
 export const ButtonLink = styled(Link)<LinkProps>(({ theme }) => ({
   '&& ': {

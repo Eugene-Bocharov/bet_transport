@@ -9,7 +9,7 @@ import { ShortDesc } from '../../components/Molecules/ShortDesc/ShortDesc';
 import { WhyUs } from '../../components/Organisms/WhyUs/WhyUs';
 import { margin } from '@mui/system';
 import { Footer } from '../../components/Organisms/Footer/Footer';
-
+import { SimpleSlider } from '../../components/Molecules/HomeSlide/HomeSlide';
 import { MovingAbout } from '../../components/Organisms/MovingAbout/MovingAbout';
 
 export function MovingPage() {
@@ -19,6 +19,7 @@ export function MovingPage() {
         <p>не має тут бути</p>
       </Header>
       {/* Fix the style attribute */}
+      <SimpleSlider />
       <MovingPic />
       <MovingAbout />
       <Footer />

@@ -1,21 +1,23 @@
 import { styled } from '@mui/material/styles';
 import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
 
-export const ModernPicBox = styled(Box)(({ theme }) => ({
-  width: '75.3%',
-  height: '80vh',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundImage: `url(https://images.unsplash.com/photo-1578727412900-e41cffc5074a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80)`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'left center',
-  transform: 'scaleX(-1)',
-  marginTop: '200px',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-}));
+export const ModernPicBox = styled(Box)<BoxProps & { src?: string }>(
+  ({ theme, src }) => ({
+    width: '75.3%',
+    height: '80vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url("${src}")`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'left center',
+    transform: 'scaleX(-1)',
+    marginTop: '200px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  })
+);
 
 export const ModernPicBoxIns = styled(Box)(({ theme }) => ({
   width: '100%',

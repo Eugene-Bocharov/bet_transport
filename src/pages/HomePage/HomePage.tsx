@@ -8,7 +8,8 @@ import { ModernPic } from '../../components/Molecules/ModernPic/ModernPic';
 import { ShortDesc } from '../../components/Molecules/ShortDesc/ShortDesc';
 import { WhyUs } from '../../components//Organisms/WhyUs/WhyUs';
 import { Footer } from '../../components/Organisms/Footer/Footer';
-
+import { SimpleSlider } from '../../components/Molecules/HomeSlide/HomeSlide';
+import { HomeAbout } from '../../components/Organisms/HomeAbout/HomeAbout';
 export function HomePage() {
   return (
     <>
@@ -19,6 +20,8 @@ export function HomePage() {
         <HomeTitle />
       </HomeVid>
       {/* <ShortDesc /> */}
+      <SimpleSlider />
+      <HomeAbout />
       <AboutUs />
       <ModernPic />
       <WhyUs />

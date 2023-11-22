@@ -81,29 +81,12 @@ export const Divider = styled(Box)<BoxProps>(({ theme }) => ({
   // transform: 'rotateX(180deg)',
 }));
 
-export const ImgBox = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  // marginLeft: '70px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/nbLgtmf/IEw7zM.jpg")`,
-  backgroundSize: 'cover',
-}));
-
-export const ImgBox2 = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  // marginLeft: '70px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/nbLgtmf/IEw7zM.jpg")`,
-  backgroundSize: 'cover',
-}));
-
-export const ImgBox3 = styled(Box)<BoxProps>(({ theme }) => ({
-  height: '450px',
-  width: '450px',
-  // marginLeft: '70px',
-  backgroundPosition: 'center',
-  backgroundImage: `url("https://i.ibb.co/nbLgtmf/IEw7zM.jpg")`,
-  backgroundSize: 'cover',
-}));
+export const ImgBox = styled(Box)<BoxProps & { src?: string }>(
+  ({ theme, src }) => ({
+    height: '450px',
+    width: '450px',
+    backgroundPosition: 'center',
+    backgroundImage: `url("${src}")`,
+    backgroundSize: 'cover',
+  })
+);
